@@ -29,12 +29,12 @@ export default class App extends Component {
         <TextInput
           style={{margin: 10}}
           multiline={true}
-          placeholder="Type text to display in toast"
+          placeholder="Type amount to pay"
           onChangeText={text => this.setState({text})}
         />
         <Button
           onPress={() => {
-            NativeModules.Payhere.payOnece();
+            NativeModules.Payhere.payOnece(50);
           }}
           title="Call Payhere"
           color="#841584"

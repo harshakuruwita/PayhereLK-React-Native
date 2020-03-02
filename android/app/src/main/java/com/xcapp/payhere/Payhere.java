@@ -47,7 +47,7 @@ public class Payhere extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void payOnece() {
+    public void payOnece(int amount) {
  Log.d("Payment call","Caling payment");
         InitRequest req = new InitRequest();
         req.setMerchantId("1210XXX");       // Your Merchant PayHere ID
