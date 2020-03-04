@@ -183,7 +183,7 @@ dependencies {
     implementation "com.facebook.react:react-native:+"  // From
     implementation 'com.google.code.gson:gson:2.8.0'
     implementation 'com.android.support:appcompat-v7:25.4.0'
-    implementation 'lk.payhere.sdk:android-payment-sdk:2.0.11'
+    implementation 'lk.payhere.sdk:android-payment-sdk:0.1.6'
 
 
 

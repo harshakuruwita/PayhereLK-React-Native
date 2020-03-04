@@ -6,8 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 
+
+import com.facebook.react.bridge.ActivityEventListener;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -25,9 +26,12 @@ public class Payhere extends ReactContextBaseJavaModule {
 
     private final ReactApplicationContext reactContext;
     private final static int PAYHERE_REQUEST = 11010;
+    private final InitRequest req;
     public Payhere(ReactApplicationContext reactContext) {
         super(reactContext);
         this.reactContext = reactContext;
+        reactContext.addActivityEventListener((ActivityEventListener) this);
+         req = new InitRequest();
     }
 
 
@@ -48,10 +52,10 @@ public class Payhere extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void payOnece(int amount) {
- Log.d("Payment call","Caling payment");
-        InitRequest req = new InitRequest();
-        req.setMerchantId("1210XXX");       // Your Merchant PayHere ID
-        req.setMerchantSecret("ugknesnvn"); // Your Merchant secret (Add your app at Settings > Domains & Credentials, to get this))
+
+
+        req.setMerchantId("1213804");       // Your Merchant PayHere ID
+        req.setMerchantSecret("4ZGRnKOnY1s8Qh7WG20eKT8X2Z6yS7FH18lzDbfLIvnM"); // Your Merchant secret (Add your app at Settings > Domains & Credentials, to get this))
         req.setCurrency("LKR");             // Currency code LKR/USD/GBP/EUR/AUD
         req.setAmount(1000.00);             // Final Amount to be charged
         req.setOrderId("230000123");        // Unique Reference ID
@@ -70,7 +74,7 @@ public class Payhere extends ReactContextBaseJavaModule {
         req.getCustomer().getDeliveryAddress().setAddress("No.2, Kandy Road");
         req.getCustomer().getDeliveryAddress().setCity("Kadawatha");
         req.getCustomer().getDeliveryAddress().setCountry("Sri Lanka");
-        req.getItems().add(new Item(null, "Door bell wireless", 1, 1000.0));
+
 
 
         Intent intent = new Intent(reactContext, PHMainActivity.class);
@@ -79,6 +83,10 @@ public class Payhere extends ReactContextBaseJavaModule {
 
         reactContext.startActivityForResult(intent, PAYHERE_REQUEST, Bundle.EMPTY);
 
-       // successCallback.invoke(intent);
+
     }
+
+
+
+
 }
