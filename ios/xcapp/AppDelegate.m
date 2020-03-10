@@ -30,6 +30,12 @@
   return YES;
 }
 
+- (void)goToReactNative {
+
+  [self.window.rootViewController dismissViewControllerAnimated:TRUE completion:nil];
+
+}
+
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
 {
 #if DEBUG

@@ -16,6 +16,8 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* xcappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* xcappTests.m */; };
+		3A84C72D2413C33900C93ABD /* Payhere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A84C72C2413C33900C93ABD /* Payhere.swift */; };
+		3A84C72F2413C58500C93ABD /* Payhere.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A84C72E2413C58500C93ABD /* Payhere.m */; };
 		6BB0AA7AB7270E2373393572 /* libPods-xcapp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A89394A494DD54480ADA0C52 /* libPods-xcapp-tvOS.a */; };
 		70085F359D8F4D22A42F8B43 /* libPods-xcapp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33693F4B987B9D20B9757372 /* libPods-xcapp-tvOSTests.a */; };
 		7CB565BABDFDBD0FBE05A562 /* libPods-xcapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D39A9955BAADE9FC692DF2F /* libPods-xcapp.a */; };
@@ -58,6 +60,9 @@
 		2D02E4901E0B4A5D006451C7 /* xcapp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "xcapp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33693F4B987B9D20B9757372 /* libPods-xcapp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-xcapp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		371DE8E3D02EC54DB8ED598C /* Pods-xcapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xcapp.debug.xcconfig"; path = "Target Support Files/Pods-xcapp/Pods-xcapp.debug.xcconfig"; sourceTree = "<group>"; };
+		3A84C72B2413C33900C93ABD /* xcapp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "xcapp-Bridging-Header.h"; sourceTree = "<group>"; };
+		3A84C72C2413C33900C93ABD /* Payhere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payhere.swift; sourceTree = "<group>"; };
+		3A84C72E2413C58500C93ABD /* Payhere.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Payhere.m; sourceTree = "<group>"; };
 		4C47D266B48D78A1BDF730D0 /* Pods-xcapp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xcapp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-xcapp-tvOS/Pods-xcapp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		59F90E2E66748F823875A2F2 /* Pods-xcapp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xcapp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-xcapp-tvOSTests/Pods-xcapp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		616603C543E9939B5A7846ED /* Pods-xcappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xcappTests.release.xcconfig"; path = "Target Support Files/Pods-xcappTests/Pods-xcappTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +130,7 @@
 		13B07FAE1A68108700A75B9A /* xcapp */ = {
 			isa = PBXGroup;
 			children = (
+				3A84C72A2413C2F700C93ABD /* Payhere */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -147,6 +153,16 @@
 				21CAC200D7FEF8860F563ADD /* libPods-xcappTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A84C72A2413C2F700C93ABD /* Payhere */ = {
+			isa = PBXGroup;
+			children = (
+				3A84C72C2413C33900C93ABD /* Payhere.swift */,
+				3A84C72B2413C33900C93ABD /* xcapp-Bridging-Header.h */,
+				3A84C72E2413C58500C93ABD /* Payhere.m */,
+			);
+			name = Payhere;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -194,7 +210,6 @@
 				68ECE6B1367DF4BF4FBEE1CE /* Pods-xcappTests.debug.xcconfig */,
 				616603C543E9939B5A7846ED /* Pods-xcappTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -292,6 +307,10 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 6W49AKL4C3;
+						LastSwiftMigration = 1130;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -308,6 +327,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -529,6 +549,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				3A84C72D2413C33900C93ABD /* Payhere.swift in Sources */,
+				3A84C72F2413C58500C93ABD /* Payhere.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,6 +604,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 68ECE6B1367DF4BF4FBEE1CE /* Pods-xcappTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -605,6 +628,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 616603C543E9939B5A7846ED /* Pods-xcappTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = xcappTests/Info.plist;
@@ -626,8 +650,10 @@
 			baseConfigurationReference = 371DE8E3D02EC54DB8ED598C /* Pods-xcapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = 6W49AKL4C3;
 				INFOPLIST_FILE = xcapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -637,6 +663,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = xcapp;
+				SWIFT_OBJC_BRIDGING_HEADER = "xcapp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -646,7 +675,9 @@
 			baseConfigurationReference = D728034D1E661A7DB1C010E9 /* Pods-xcapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6W49AKL4C3;
 				INFOPLIST_FILE = xcapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -656,6 +687,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = xcapp;
+				SWIFT_OBJC_BRIDGING_HEADER = "xcapp-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
