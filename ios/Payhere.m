@@ -10,5 +10,6 @@
 #import "React/RCTBridgeModule.h"
 
 @interface RCT_EXTERN_MODULE(Payhere, NSObject)
-RCT_EXTERN_METHOD(payOnece:(NSInteger *)amount)
+RCT_EXTERN_METHOD(payOnece)
+RCT_EXTERN_METHOD(callbackMethod:(RCTResponseSenderBlock)callback)
 @end

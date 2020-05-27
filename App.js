@@ -15,6 +15,7 @@ import {
   NativeModules,
   View,
   Button,
+  Alert,
 } from 'react-native';
 
 export default class App extends Component {
@@ -34,7 +35,7 @@ export default class App extends Component {
         />
         <Button
           onPress={() => {
-            NativeModules.Payhere.payOnece(50);
+            NativeModules.Payhere.callbackMethod((err, r) => console.log(r));
           }}
           title="Call Payhere"
           color="#841584"
